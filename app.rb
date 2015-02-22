@@ -17,9 +17,10 @@ DATE_FORMAT = "%a %b %-d"   # ignore time, all complaintes arrive at 12:00:00 am
 DATETIME_FORMAT = "%a %b %-d at %I:%M%p"   # ignore time, all complaintes arrive at 12:00:00 am (?)
 
 get '/' do
+  "<style>p {background-color: #F1F1F2; float:left; width: 150px; text-align: center; padding: 5px; margin: 5px;} p img { width: 120px; }</style>" +
   "<h1>All the feeds</h1> <ul>" + 
-  "<li><a href='/nyc-311-rodent'>NYC 311 Rodent Complaints</a></li>" + 
-  "<li><a href='/nyc-311-water'>NYC 311 Water System Complaints</a></li>" + 
+  "<p><a href='/nyc-311-rodent'><img src='rat.png'><br>NYC 311 Rodent Complaints</a></li></p>" + 
+  "<p><a href='/nyc-311-water'><img src='water.png'><br>NYC 311 Water System Complaints</a></p>" + 
   "</ul> "
 
 end
