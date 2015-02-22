@@ -1,4 +1,5 @@
 require 'faraday'
+require 'faraday_middleware'
 require 'sinatra'
 require 'date'
 
@@ -13,6 +14,11 @@ class DateTime
 end
 
 DATE_FORMAT = "%a %b %-d"   # ignore time, all complaintes arrive at 12:00:00 am (?)
+
+get '/' do
+  "<h1>All the feeds</h1> <ul><li><a href='/nyc-311-rodent'>NYC 311 Rodent</a></li></ul> "
+
+end
 
 get '/nyc-311-rodent' do
   url = URI('https://data.cityofnewyork.us/resource/erm2-nwe9.json')
